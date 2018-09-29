@@ -1,0 +1,110 @@
+/*简单初始化*/
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html,body {
+	font-family: sans-serif;
+	width: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+body{
+  height: 100%;
+  background-color: rgb(97, 198, 238);
+}
+
+.container {
+	width: 960px;
+  margin: 0 auto;
+
+  .title{
+    margin: 30px 0 30px 0;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .input-wrapper{
+    width: 960px;
+    
+    .todo-add{
+      font-size: 0px;
+
+      input{
+        display: inline-block;
+        box-sizing: border-box;
+        width: 88%;
+        height: 30px;
+        text-indent: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: none;
+      }
+
+      #button{
+        display: inline-block;
+        width: 10%;
+        height: 30px;
+        margin-left: 2%;
+        vertical-align: top;
+        border-radius: 6px;
+        border: none;
+        font-size: 16px;
+        color: #fff;
+        background-color: rgb(70, 149, 223);
+
+        &:hover{
+          background-color: rgb(69, 169, 231);
+        }
+      }
+    }
+  }
+
+  .list-wrapper{
+    width: 960px;
+    .doing, .done{
+      margin-top: 10px;
+      .item{
+        background-color: #fff;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 6px;
+        padding: 0 10px;
+        margin-top: 10px;
+        font-size: 0;
+        transition: all 0.4s;
+
+        .text{
+          margin-left: 10px;
+          font-size: 16px;
+        }
+        .delete{
+          float: right;
+          font-size: 16px;
+          color: gray;
+          &:hover{
+            color: #000;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .doing{
+      .item{
+        &:hover{
+          background-color: rgba(212, 207, 207, 0.8);
+        }
+      }
+    }
+    .done{
+      .item{
+        background-color: rgb(140, 202, 148);
+        text-decoration: line-through;
+      }
+    }
+  }
+}

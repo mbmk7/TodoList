@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/main.css">
+  <title>todoList</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">ToDoList</h1>
+
+    <!--输入区-->
+    <div class="input-wrapper">
+      <form class="todo-add">
+        <input type="text" placeholder="eg:12点吃饭" autofocus>
+        <button type="submit" id="button">Add to list</button>
+      </form>
+    </div>
+
+    <!--内容区-->
+    <div class="list-wrapper">
+
+      <!--进行项-->
+      <ul class="doing"></ul>
+
+      <!--完成项-->
+      <ul class="done"></ul>
+    </div>
+  </div>
+</body>
+<script src="lib/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
+</html>

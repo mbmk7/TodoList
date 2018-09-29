@@ -1,0 +1,98 @@
+/*简单初始化*/
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  font-family: sans-serif;
+  width: 100%;
+}
+li {
+  list-style: none;
+}
+body {
+  height: 100%;
+  background-color: #61c6ee;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+.container .title {
+  margin: 30px 0 30px 0;
+  font-size: 30px;
+  color: #fff;
+}
+.container .input-wrapper {
+  width: 960px;
+}
+.container .input-wrapper .todo-add {
+  font-size: 0px;
+}
+.container .input-wrapper .todo-add input {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 88%;
+  height: 30px;
+  text-indent: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+.container .input-wrapper .todo-add #button {
+  display: inline-block;
+  width: 10%;
+  height: 30px;
+  margin-left: 2%;
+  vertical-align: top;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4695df;
+}
+.container .input-wrapper .todo-add #button:hover {
+  background-color: #45a9e7;
+}
+.container .list-wrapper {
+  width: 960px;
+}
+.container .list-wrapper .doing,
+.container .list-wrapper .done {
+  margin-top: 10px;
+}
+.container .list-wrapper .doing .item,
+.container .list-wrapper .done .item {
+  background-color: #fff;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 6px;
+  padding: 0 10px;
+  margin-top: 10px;
+  font-size: 0;
+  transition: all 0.4s;
+}
+.container .list-wrapper .doing .item .text,
+.container .list-wrapper .done .item .text {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.container .list-wrapper .doing .item .delete,
+.container .list-wrapper .done .item .delete {
+  float: right;
+  font-size: 16px;
+  color: gray;
+}
+.container .list-wrapper .doing .item .delete:hover,
+.container .list-wrapper .done .item .delete:hover {
+  color: #000;
+  cursor: pointer;
+}
+.container .list-wrapper .doing .item:hover {
+  background-color: rgba(212, 207, 207, 0.8);
+}
+.container .list-wrapper .done .item {
+  background-color: #8cca94;
+  text-decoration: line-through;
+}
