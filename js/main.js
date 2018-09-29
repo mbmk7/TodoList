@@ -65,11 +65,10 @@ $(function () {
       let dataFromStorage = JSON.parse(window.localStorage.list);
       for (let key in dataFromStorage) {
         for (let index in dataFromStorage[key]){
+          let text = dataFromStorage[key][index];
           if (key === 'doing') {
-            let text = dataFromStorage[key][index];
             addToList(text, $('.doing'));
           }else if(key === 'done'){
-            let text = dataFromStorage[key][index];
             addToList(text, $('.done'));
           }
         }
