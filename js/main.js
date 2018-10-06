@@ -62,19 +62,25 @@ $(function () {
 
     // 初始化页面，读取localstorage
     function loadList() {
-      let dataFromStorage = JSON.parse(window.localStorage.list);
-      for (let key in dataFromStorage) {
-        for (let index in dataFromStorage[key]){
-          let text = dataFromStorage[key][index];
-          if (key === 'doing') {
-            addToList(text, $('.doing'));
-          }else if(key === 'done'){
-            addToList(text, $('.done'));
+      if (window.localStorage.list) {
+        let dataFromStorage = JSON.parse(window.localStorage.list);
+        for (let key in dataFromStorage) {
+          for (let index in dataFromStorage[key]){
+            let text = dataFromStorage[key][index];
+            if (key === 'doing') {
+              addToList(text, $('.doing'));
+            }else if(key === 'done'){
+              addToList(text, $('.done'));
+            }
           }
         }
+      }else{
+        return
       }
       let checkBoxList = $('.done > .item > input');
-      checkBoxList.attr('checked', 'checked');
+      checkBoxList.prop('checked', 'true');
 
     }
+
+
 })
